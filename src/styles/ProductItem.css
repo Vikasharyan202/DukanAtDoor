@@ -1,0 +1,22 @@
+.product-item {
+  width: 200px;
+  height: 400px;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  flex: 1 0 21%;
+  box-sizing: border-box;
+  text-align: center; 
+}
+.product-item img.product-image {
+  width: 70%;
+  height: 300px;
+  margin-bottom: 1rem; 
+}
+
+.product-item h2 {
+  margin: 0 0 1rem;
+}
+
+.product-item button {
+  margin-right: 0.5rem;
+}

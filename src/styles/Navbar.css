@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #a39f9f;
+    color: white;
+  }
+  
+  .navbar .cart {
+    margin-right: 1rem;
+  }
+  
+  .navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+  }
+  
