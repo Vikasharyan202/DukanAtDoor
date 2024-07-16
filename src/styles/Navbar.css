@@ -4,16 +4,31 @@
     align-items: center;
     padding: 1rem;
     background-color: #a39f9f;
-    color: white;
-  }
-  
-  .navbar .cart {
-    margin-right: 1rem;
-  }
-  
-  .navbar .nav-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 1rem;
-  }
+    color: white;   
+}
+.navbar>h1>*{
+  text-decoration: none;
+}
+.nav-links{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-links>*{
+  text-decoration: none;
+}
+.cart{
+  width: 4rem;
+  height: 3rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgb(6, 115, 224);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart-icon{
+  width: 3rem;
+  height: 3rem;
+}
   

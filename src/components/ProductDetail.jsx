@@ -22,7 +22,7 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail">
-      <h1>{product.name}</h1>
+      <h1>{product.title}</h1>
       <p>${product.price}</p>
       <button onClick={handleAddToCart}>Add to Cart</button>
     </div>

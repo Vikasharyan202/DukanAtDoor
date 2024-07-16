@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { editProduct, deleteProduct } from '../redux/slices/productsSlice';
 import { addToCart } from '../redux/slices/cartSlice';
 import '../styles/ProductItem.css';
+import { Link } from 'react-router-dom';
 
 const ProductItem = ({ product }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -31,13 +32,14 @@ const ProductItem = ({ product }) => {
   };
 
   return (
-    <div className="product-item">
+    
+    <div className="product-item">   
       {isEditing ? (
         <>
           <input
             type="text"
-            value={editedProduct.name}
-            onChange={(e) => setEditedProduct({ ...editedProduct, name: e.target.value })}
+            value={editedProduct.title}
+            onChange={(e) => setEditedProduct({ ...editedProduct, title: e.target.value })}
           />
           <input
             type="number"
@@ -48,10 +50,12 @@ const ProductItem = ({ product }) => {
         </>
       ) : (
         <>
-          <img src={product.image} alt={product.name} className="product-image" />
-          <h2>{product.name}</h2>
-          <p>${product.price}</p>
-          <button onClick={handleEdit}>Edit</button>
+          <Link to={`/product/${product.id}`} className='product-link'>
+            <img src={product.image} alt={product.title} className="product-image" />
+            <h2>{product.title}</h2>
+            <p>₹{product.price}</p>           
+          </Link>   
+          <button onClick={handleEdit}>Edit</button>      
         </>
       )}
       <button onClick={handleDelete}>Delete</button>

@@ -1,0 +1,22 @@
+.product-detail {
+    margin: 2rem;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.product-detail .details{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.product-detail button{
+    width: 7rem;
+    height: 3rem;
+    align-self: center;
+    font-size: 1.2rem;
+    color: green;
+}
+.product-detail p{
+    font-size: 1.3rem;
+}

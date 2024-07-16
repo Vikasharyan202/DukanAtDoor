@@ -18,22 +18,25 @@ const Cart = () => {
   };
 
   return (
-    <div className="cart">
+    <div className="cart-cont">
       <h1>Cart</h1>
-      {cartItems.length === 0 ? (
-        <p>No items in the cart</p>
-      ) : (
-        cartItems.map((item) => (
-          <div key={item.id} className="cart-item">
-            <h2>{item.name}</h2>
-            <p>${item.price}</p>
-            <button onClick={() => handleRemove(item.id)}>Remove</button>
-          </div>
-        ))
-      )}
+      <div>
+        {cartItems.length === 0 ? (
+          <p>No items in the cart</p>
+        ) : (
+          cartItems.map((item) => (
+            <div key={item.id} className="cart-item">
+              <img alt='product' src={item.image} />
+              <h2>{item.title}</h2>
+              <p>₹{item.price}</p>
+              <button onClick={() => handleRemove(item.id)} className='remove-btn'>Remove</button>
+            </div>
+          ))
+        )}       
+      </div>  
       {cartItems.length > 0 && (
-        <button onClick={handleClearCart}>Clear Cart</button>
-      )}
+          <button onClick={handleClearCart} className='clear-btn'>Clear Cart</button>
+        )}  
     </div>
   );
 };

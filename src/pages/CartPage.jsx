@@ -6,12 +6,15 @@ const CartPage = () => {
   const cartItems = useSelector((state) => state.cart.items);
 
   return (
-    <div>
+    <div className="cart-cont">
       <h1>Cart</h1>
       {cartItems.map((item) => (
         <div key={item.id} className="cart-item">
-          <h2>{item.name}</h2>
-          <p>${item.price}</p>
+          <img alt='item' src={item.image} />
+          <div>
+            <h2>{item.title}</h2>
+            <p>₹{item.price}</p>
+          </div>         
         </div>
       ))}
     </div>
